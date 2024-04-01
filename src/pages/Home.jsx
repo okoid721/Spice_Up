@@ -3,7 +3,7 @@ import Popular from '../components/popular/Popular';
 import Vegi from '../components/popular/Vegi';
 const Home = () => {
   return (
-    <div>
+    <div className="">
       <Vegi />
       <Popular />
     </div>

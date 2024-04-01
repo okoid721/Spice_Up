@@ -14,7 +14,7 @@ const Popular = () => {
       setPopular(JSON.parse(check));
     } else {
       const api = await fetch(
-        `https://recipe-bakend.onrender.com/api/smallChop/get-smallchop`
+        `https://recipe-bakend.onrender.com/api/food/get-smallchop`
       );
       const data = await api.json();
       localStorage.setItem('popular', JSON.stringify(data));
@@ -24,7 +24,9 @@ const Popular = () => {
   };
   return (
     <div className="my-16 mx-0 ">
-      <h2>Popular Picks</h2>
+      <h2 className="font-sans font-extrabold text-3xl underline">
+        Popular Picks
+      </h2>
       <Splide
         options={{
           perPage: 4,
@@ -33,13 +35,12 @@ const Popular = () => {
           drag: true,
           gap: '1rem',
           autoplay: true,
-          rewind: true,
         }}
       >
-        {popular.map((data) => {
+        {popular.map((data, index) => {
           return (
-            <SplideSlide key={data.id}>
-              <div className=" lg:min-h-[300px] h-[150px]  lg:rounded-[2rem] overflow-hidden p-4 relative">
+            <SplideSlide key={index}>
+              <div className=" lg:min-h-[300px] h-[150px] shadow-xl lg:rounded-[2rem] overflow-hidden p-4 relative">
                 <p className=" absolute z-10 left-0 bottom-0 right-0 text-white w-[100%] text-center font-bold text-[1rem] h-[40%] flex justify-center items-center ">
                   {data.name}
                 </p>
