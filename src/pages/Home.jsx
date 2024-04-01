@@ -4,8 +4,8 @@ import Vegi from '../components/popular/Vegi';
 const Home = () => {
   return (
     <div>
-      <Popular />
       <Vegi />
+      <Popular />
     </div>
   );
 };
