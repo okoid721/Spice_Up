@@ -35,8 +35,8 @@ function BreakfastHead() {
         <h2 className="font-extrabold text-3xl underline mb-2">
           {breakfastTitle}
         </h2>
-        <p>
-          <h3>Ingredients</h3>
+        <p className=" flex flex-col">
+          <h3 className=" text-2xl font-extrabold">Ingredients:</h3>
           {breakfastDescription}
         </p>
       </div>
