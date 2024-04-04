@@ -6,7 +6,7 @@ import Popular from './Popular';
 const Breakfast = () => {
   return (
     <Container>
-      <div>
+      <div className="lg:block  hidden">
         <h1 className="text-center mt-5 font-extrabold text-3xl underline">
           Breakfast Treding
         </h1>
