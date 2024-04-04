@@ -43,3 +43,12 @@
   color: white;
   overflow: hidden;
 }
+.admin {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 700px;
+  position: relative;
+  color: white;
+  overflow: hidden;
+}

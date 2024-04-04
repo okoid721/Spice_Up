@@ -66,18 +66,24 @@ const Nav = () => {
                   Breakfast
                 </h1>
               </Link>
-              <h1 className="hover:underline focus:underline flex lg:flex-col items-center flex-row">
-                <MdLunchDining size={30} />
-                Lunch
-              </h1>
-              <h1 className="hover:underline focus:underline flex lg:flex-col items-center flex-row">
-                <MdDinnerDining size={30} />
-                Dinner
-              </h1>
-              <h1 className="hover:underline focus:underline flex lg:flex-col items-center flex-row">
-                <GiRoastChicken size={30} />
-                SmallChop
-              </h1>
+              <Link to="/lunch">
+                <h1 className="hover:underline focus:underline flex lg:flex-col items-center flex-row">
+                  <MdLunchDining size={30} />
+                  Lunch
+                </h1>
+              </Link>
+              <Link to="/dinner">
+                <h1 className="hover:underline focus:underline flex lg:flex-col items-center flex-row">
+                  <MdDinnerDining size={30} />
+                  Dinner
+                </h1>
+              </Link>
+              <Link to="/smallchop">
+                <h1 className="hover:underline focus:underline flex lg:flex-col items-center flex-row">
+                  <GiRoastChicken size={30} />
+                  SmallChop
+                </h1>
+              </Link>
               <h1 className="hover:underline focus:underline flex lg:flex-col items-center flex-row">
                 <IoIosAdd size={30} />
                 Add Your Favourite meal
