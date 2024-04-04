@@ -1,11 +1,16 @@
 import React from 'react';
-import Popular from '../components/popular/Popular';
-import Vegi from '../components/popular/Vegi';
+import Breakfast from '../components/popular/Breakfast';
+import Dinner from '../components/popular/Dinner';
+import Lunch from '../components/popular/Lunch';
+import SmallChop from '../components/popular/SmallChop';
+
 const Home = () => {
   return (
     <div className="">
-      <Vegi />
-      <Popular />
+      <Breakfast />
+      <Lunch />
+      <Dinner />
+      <SmallChop />
     </div>
   );
 };

@@ -12,3 +12,34 @@
 /* body{
   margin: 0%, 20%;
 } */
+.signup {
+  background-image: url(../public/burger-with-melted-cheese.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 500px;
+  position: relative;
+  color: white;
+  overflow: hidden;
+}
+
+.login {
+  background-image: url(../public/588595864r-LS.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 500px;
+  position: relative;
+  color: white;
+  overflow: hidden;
+}
+.signup {
+  background-image: url(../public/burger-with-melted-cheese.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 500px;
+  position: relative;
+  color: white;
+  overflow: hidden;
+}

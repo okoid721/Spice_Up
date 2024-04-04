@@ -27,12 +27,11 @@ const Nav = () => {
           <FaSearch size={30} className="" />
         </div>
         <div>
-          <Link to="/auth/login">
+          <Link to="/auth/signup">
             <button className="lg:text-2xl font-bold hover:underline flex flex-col lg:flex-row items-center py-2 px-6">
               <IoPerson />
-              Signin
+              Logout
             </button>
-            s
           </Link>
         </div>
       </div>
