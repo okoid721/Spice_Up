@@ -1,7 +1,7 @@
 import './App.css';
 import Nav from './components/Nav';
 import LandingPage from './pages/LandingPage';
-import Pages from './pages/Pages';
+import Home from './pages/Home';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Auth from './pages/Auth';
 
@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route path="/auth/*" element={<Auth />} />
            <Route path="/" element={<LandingPage />} />
-          <Route path="/home" element={<Pages />} />
+          <Route path="/home/*" element={<Home />} />
         </Routes>
       </BrowserRouter>
     </div>

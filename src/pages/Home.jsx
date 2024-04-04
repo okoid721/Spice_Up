@@ -3,14 +3,17 @@ import Breakfast from '../components/popular/Breakfast';
 import Dinner from '../components/popular/Dinner';
 import Lunch from '../components/popular/Lunch';
 import SmallChop from '../components/popular/SmallChop';
-
+import { Routes, Route } from 'react-router-dom';
 const Home = () => {
   return (
     <div className="">
-      <Breakfast />
-      <Lunch />
-      <Dinner />
-      <SmallChop />
+      <Routes>
+        <Route path="/breakfast" element={<Breakfast />} />
+        <Route path="/lunch" element={<Lunch />} />
+        <Route path="/dinner" element={<Dinner />} />
+        <Route path="/dinner" element={<Dinner />} />
+        <Route path="/smallchop" element={<SmallChop />} />
+      </Routes>
     </div>
   );
 };
