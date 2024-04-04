@@ -47,10 +47,12 @@ const Nav = () => {
               animate={{ x: 0 }}
               transition={{ duration: 1 }}
             >
-              <h1 className="hover:underline focus:underline flex lg:flex-col items-center flex-row">
-                <MdFreeBreakfast size={30} />
-                Breakfast
-              </h1>
+              <Link to="/breakfast">
+                <h1 className="hover:underline focus:underline flex lg:flex-col items-center flex-row">
+                  <MdFreeBreakfast size={30} />
+                  Breakfast
+                </h1>
+              </Link>
               <h1 className="hover:underline focus:underline flex lg:flex-col items-center flex-row">
                 <MdLunchDining size={30} />
                 Lunch
