@@ -103,11 +103,12 @@ const Hero = () => {
             </div>
           )}
         </div>
-        <div>
+        <div className>
           {top.map((data, i) => {
             return (
               <div key={i} className=" flex flex-col w-36 h-20 gap-4">
                 <img src={data.image} alt={`Image ${i}`} />
+                <p>{data.name}</p>
               </div>
             );
           })}

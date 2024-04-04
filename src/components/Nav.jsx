@@ -8,6 +8,7 @@ import { MdLunchDining } from 'react-icons/md';
 import { MdDinnerDining } from 'react-icons/md';
 import { GiRoastChicken } from 'react-icons/gi';
 import { IoIosAdd } from 'react-icons/io';
+import { Link } from 'react-router-dom';
 
 const Nav = () => {
   const [open, setOpen] = React.useState(false);
@@ -26,10 +27,13 @@ const Nav = () => {
           <FaSearch size={30} className="" />
         </div>
         <div>
-          <button className="lg:text-2xl font-bold hover:underline flex flex-col lg:flex-row items-center py-2 px-6">
-            <IoPerson />
-            Signin
-          </button>
+          <Link to="/auth/login">
+            <button className="lg:text-2xl font-bold hover:underline flex flex-col lg:flex-row items-center py-2 px-6">
+              <IoPerson />
+              Signin
+            </button>
+            s
+          </Link>
         </div>
       </div>
       <div className=" flex lg:items-center items-start flex-col justify-between lg:flex-row  ">
