@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
 
 const Login = () => {
@@ -11,6 +11,7 @@ const Login = () => {
 
   const [error, setError] = React.useState('');
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleChange = ({ currentTarget: input }) => {
     setData({ ...data, [input.name]: input.value });
@@ -21,7 +22,7 @@ const Login = () => {
     try {
       const url = 'https://recipe-bakend.onrender.com/api/auth/login';
       const { data: res } = await axios.post(url, data);
-      navigate('/home');
+      navigate('/', { replace: true, state: { from: location } });
       console.log('Successfully signed up!', res);
       toast.success('Welcome to Spice up');
     } catch (err) {

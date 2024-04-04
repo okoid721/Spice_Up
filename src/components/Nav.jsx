@@ -12,13 +12,14 @@ import { Link } from 'react-router-dom';
 
 const Nav = () => {
   const [open, setOpen] = React.useState(false);
+  const [login, setLogin] = React.useState(false);
   return (
-    <div className=" w-full bg-[aliceblue] shadow-xl py-6 sticky lg:px-6 px-2">
+    <div className=" w-full bg-[aliceblue]  shadow-xl py-6 sticky lg:px-6 px-2">
       <div className="flex flex-row items-center justify-between">
         <h1 className="lg:font-extrabold lg:text-3xl font-semibold">
           SPICE_☝🏿
         </h1>
-        <div className="flex items-center bg-white w-fit lg:px-7 px-2 py-2 lg:font-extrabold rounded-lg shadow-xl">
+        <div className=" items-center hidden lg:flex bg-white w-fit lg:px-7 px-2 py-2 lg:font-extrabold rounded-lg shadow-xl">
           <input
             type="search"
             placeholder="Search...."
@@ -26,13 +27,25 @@ const Nav = () => {
           />
           <FaSearch size={30} className="" />
         </div>
-        <div>
-          <Link to="/auth/signup">
-            <button className="lg:text-2xl font-bold hover:underline flex flex-col lg:flex-row items-center py-2 px-6">
-              <IoPerson />
-              Logout
-            </button>
-          </Link>
+        <div className="flex flex-col bg-white py-0 px-2 shadow-xl">
+          <button
+            className="lg:text-2xl font-bold hover:underline flex flex-col lg:flex-row items-center py-2 px-6"
+            onClick={() => setLogin(!login)}
+          >
+            <IoPerson />
+            My Acct
+          </button>
+
+          {login && (
+            <div className=" flex flex-col items-center justify-center">
+              <Link to="/auth/signup" className="font-semibold hover:underline">
+                <div>Sign Up</div>
+              </Link>
+              <Link to="/auth/login" className="font-semibold hover:underline">
+                <div>Login</div>
+              </Link>
+            </div>
+          )}
         </div>
       </div>
       <div className=" flex lg:items-center items-start flex-col justify-between lg:flex-row  ">
@@ -72,6 +85,14 @@ const Nav = () => {
             </motion.div>
           )}
         </div>
+      </div>
+      <div className=" items-center  flex lg:hidden bg-white w-fit lg:px-7 px-2 py-2 lg:font-extrabold rounded-lg shadow-xl">
+        <input
+          type="search"
+          placeholder="Search...."
+          className="bg-transparent outline-none rounded-none"
+        />
+        <FaSearch size={30} className="" />
       </div>
     </div>
   );
