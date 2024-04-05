@@ -43,7 +43,7 @@ const SignUp = () => {
   };
   return (
     <div className=" w-full min-h-screen bg-[#f5f5f5] flex items-center justify-center ">
-      <div className="  h-[500px] flex rounded-[10px] items-center just shadow-xl ">
+      <div className="  lg:h-[500px] h-screen flex rounded-[10px] items-center just shadow-xl ">
         <div className="signup hidden lg:block"></div>
         <div className="flex flex-col h-full items-center justify-center bg-white p-8 ">
           <form className="flex flex-col items-center" onSubmit={handleSubmit}>

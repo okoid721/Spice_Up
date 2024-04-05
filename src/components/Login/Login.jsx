@@ -38,10 +38,13 @@ const Login = () => {
   };
   return (
     <div className=" w-full min-h-screen bg-[#f5f5f5] flex items-center justify-center ">
-      <div className="  h-[500px] flex rounded-[10px] items-center just shadow-xl ">
-        <div className="login hidden lg:block"></div>
+      <div className="  lg:h-[500px] h-screen lg:flex-row flex-col flex rounded-[10px] items-center just shadow-xl ">
+        <div className="login  "></div>
         <div className="flex flex-col h-full items-center justify-center bg-white p-8 ">
-          <form className="flex flex-col items-center" onSubmit={handleSubmit}>
+          <form
+            className="flex flex-col items-center  "
+            onSubmit={handleSubmit}
+          >
             <h1 className="text-3xl mt-0">Login</h1>
 
             <input
