@@ -13,6 +13,25 @@ import { Link } from 'react-router-dom';
 const Nav = () => {
   const [open, setOpen] = React.useState(false);
   const [login, setLogin] = React.useState(false);
+  const [isOpen, setIsOpen] = React.useState(false);
+  const menuRef = React.useRef(null);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleOutsideClick = (event) => {
+    if (menuRef.current && !menuRef.current.contains(event.target)) {
+      setIsOpen(false);
+    }
+  };
+
+  React.useEffect(() => {
+    document.addEventListener('mousedown', handleOutsideClick);
+    return () => {
+      document.removeEventListener('mousedown', handleOutsideClick);
+    };
+  }, []);
   return (
     <div className=" w-full bg-[aliceblue]  shadow-xl py-6 sticky lg:px-6 px-2">
       <div className="flex flex-row items-center justify-between">
@@ -27,7 +46,10 @@ const Nav = () => {
           />
           <FaSearch size={30} className="" />
         </div>
-        <div className="flex flex-col bg-white py-0 px-2 shadow-xl">
+        <div
+          className="flex flex-col bg-white py-0 px-2 shadow-xl"
+          onClick={toggleMenu}
+        >
           <button
             className="lg:text-2xl font-bold hover:underline flex flex-col lg:flex-row items-center py-2 px-6"
             onClick={() => setLogin(!login)}
@@ -48,7 +70,10 @@ const Nav = () => {
           )}
         </div>
       </div>
-      <div className=" flex lg:items-center items-start flex-col justify-between lg:flex-row  ">
+      <div
+        className=" flex lg:items-center items-start flex-col justify-between lg:flex-row "
+        onClick={toggleMenu}
+      >
         <button className=" w-8 h-8" onClick={() => setOpen(!open)}>
           <FaBarsStaggered size={30} />
         </button>
