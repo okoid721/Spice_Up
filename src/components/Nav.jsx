@@ -46,28 +46,13 @@ const Nav = () => {
           />
           <FaSearch size={30} className="" />
         </div>
-        <div
-          className="flex flex-col bg-white py-0 px-2 shadow-xl"
-          onClick={toggleMenu}
-        >
-          <button
-            className="lg:text-2xl font-bold hover:underline flex flex-col lg:flex-row items-center py-2 px-6"
-            onClick={() => setLogin(!login)}
-          >
-            <IoPerson />
-            My Acct
-          </button>
-
-          {login && (
-            <div className=" flex flex-col items-center justify-center">
-              <Link to="/auth/signup" className="font-semibold hover:underline">
-                <div>Sign Up</div>
-              </Link>
-              <Link to="/auth/login" className="font-semibold hover:underline">
-                <div>Login</div>
-              </Link>
-            </div>
-          )}
+        <div className="">
+          <Link to="/auth/login">
+            <button className="lg:text-2xl font-bold hover:underline flex flex-col lg:flex-row items-center py-2 px-6">
+              <IoPerson />
+              Logout
+            </button>
+          </Link>
         </div>
       </div>
       <div
