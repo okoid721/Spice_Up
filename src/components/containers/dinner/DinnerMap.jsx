@@ -1,21 +1,21 @@
 import React from 'react';
 import TruncateText from '../../TruncateText';
 
-function BreakfastMap() {
+function DinnerMap() {
   const [breakfast, setBreakfast] = React.useState([]);
   React.useEffect(() => {
     getBreakfast();
   }, []);
   const getBreakfast = async () => {
-    const check = localStorage.getItem('break');
+    const check = localStorage.getItem('din');
     if (check) {
       setBreakfast(JSON.parse(check));
     } else {
       const api = await fetch(
-        `https://recipe-bakend.onrender.com/api/food/get-breakfast`
+        `https://recipe-bakend.onrender.com/api/food/get-dinner`
       );
       const data = await api.json();
-      localStorage.setItem('break', JSON.stringify(data));
+      localStorage.setItem('din', JSON.stringify(data));
       setBreakfast(data);
       console.log(data);
     }
@@ -47,4 +47,5 @@ function BreakfastMap() {
     </div>
   );
 }
-export default BreakfastMap;
+
+export default DinnerMap;
