@@ -24,23 +24,28 @@ function BreakfastMap() {
     <div className="w-full h-screen grid lg:grid-cols-3 grid-cols-1 gap-16 mb-8 mt-8">
       {breakfast.map((data, i) => {
         return (
-          <div
-            key={i}
-            className="w-[300px]  h-[500px] shadow-lg flex flex-col bg-[#f5f5f5] rounded-[10px] items-center flex-wrap cursor-pointer"
-          >
-            <img
-              src={data.image}
-              alt={data.name}
-              className="card rounded-t-[10px]"
-            />
-            <div className="flex flex-col items-center ">
-              <h2 className=" font-extrabold text-2xl mt-5 mb-5 hover:underline">
-                {data.name}
-              </h2>
-              <p className=" px-4 font-semibold hover:underline">
-                <TruncateText text={data.description} maxLength={100} />
-              </p>
+          <div>
+            <div
+              key={i}
+              className="w-[300px]  h-[500px] shadow-lg flex flex-col bg-[#f5f5f5] rounded-[10px] items-center flex-wrap cursor-pointer"
+            >
+              <img
+                src={data.image}
+                alt={data.name}
+                className="card rounded-t-[10px]"
+              />
+              <div className="flex flex-col items-center ">
+                <h2 className=" font-extrabold text-2xl mt-5 mb-5 hover:underline">
+                  {data.name}
+                </h2>
+                <p className=" px-4 font-semibold hover:underline">
+                  <TruncateText text={data.description} maxLength={100} />
+                </p>
+              </div>
             </div>
+            <button className="py-4 px-8 bg-[#F5f5f5] w-[300px] shadow-xl font-bold text-2xl">
+              view Recipe
+            </button>
           </div>
         );
       })}

@@ -9,7 +9,7 @@ function App() {
   const isAuthRoute = location.pathname.startsWith('/auth');
 
   return (
-    <div className=" overflow-x-hidden">
+    <div className="">
       {!isAuthRoute && <Nav />} {/* Render Nav only if not on auth route */}
       <Routes>
         <Route path="/auth/*" element={<Auth />} />
