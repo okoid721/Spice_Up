@@ -33,7 +33,7 @@ const Nav = () => {
     };
   }, []);
   return (
-    <div className=" w-full bg-[aliceblue]  shadow-xl py-6 sticky lg:px-6 px-2">
+    <div className=" w-full bg-[aliceblue]  shadow-xl py-6 sticky lg:px-6 px-2 overflow-x-hidden">
       <div className="flex flex-row items-center justify-between">
         <h1 className="lg:font-extrabold lg:text-3xl font-semibold">
           SPICE_☝🏿

@@ -8,14 +8,8 @@ function App() {
   const location = useLocation();
   const isAuthRoute = location.pathname.startsWith('/auth');
 
-  // Redirect to the login page if the user is not authenticated
-  const isAuthenticated = false; // Replace this with your authentication logic
-  if (!isAuthenticated && !isAuthRoute) {
-    return <Navigate to="/auth/login" replace />;
-  }
-
   return (
-    <div className="App">
+    <div className=" overflow-x-hidden">
       {!isAuthRoute && <Nav />} {/* Render Nav only if not on auth route */}
       <Routes>
         <Route path="/auth/*" element={<Auth />} />
@@ -24,7 +18,5 @@ function App() {
     </div>
   );
 }
-
-//9160847153
 
 export default App;

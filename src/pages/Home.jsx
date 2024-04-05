@@ -6,7 +6,7 @@ import SmallChop from '../components/popular/SmallChop';
 import { Routes, Route } from 'react-router-dom';
 const Home = () => {
   return (
-    <div className="">
+    <div className=" overflow-x-hidden">
       <Routes>
         <Route path="/" element={<Breakfast />} />
         <Route path="/lunch" element={<Lunch />} />
