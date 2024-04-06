@@ -4,7 +4,7 @@ import HeroHome from './containers/Hero/HeroHome';
 
 function Hero() {
   return (
-    <div className="w-full h-screen overflow-hidden">
+    <div className="w-full h-screen lg:overflow-hidden">
       <HeroNav />
       <HeroHome />
     </div>

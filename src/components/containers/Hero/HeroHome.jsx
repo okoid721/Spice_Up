@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
 function HeroHome() {
   return (
-    <div className="w-full h-[90vh] ">
-      <div className=" flex lg:flex-row justify-between w-full h-full items-center px-16">
+    <div className="w-full lg:h-[90vh] h-srceen ">
+      <div className=" flex lg:flex-row flex-col mt-[20px] justify-between w-full h-full items-center lg:px-16 px-8">
         <motion.div
           className=" flex flex-col gap-8 text-start"
           initial={{ x: -100, opacity: 0 }}
@@ -15,8 +15,8 @@ function HeroHome() {
             duration: 1,
           }}
         >
-          <h1 className=" text-7xl leading-[5rem] font-semibold">
-            Get the food <br /> recipe more <br /> easier
+          <h1 className=" lg:text-7xl text-5xl lg:leading-[5rem]  font-semibold">
+            Get the food recipe more easier
           </h1>
           <p className=" text-[20px] fonr-semibold ">
             Find{' '}

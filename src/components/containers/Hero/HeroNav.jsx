@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 function HeroNav() {
   return (
-    <div className="w-screen">
-      <div className="w-full bg-[#d7d7d7] items-center py-4 px-8 flex justify-between">
-        <div className=" flex items-center flex-row text-2xl font-bold gap-1 ">
+    <div className="w-screen ">
+      <div className="w-full bg-[#d7d7d7] items-center py-4 lg:px-8 p-4 flex justify-between sticky top-0">
+        <div className=" flex items-center flex-row lg:text-2xl text-lg font-bold gap-1 ">
           Welcome To{' '}
-          <span className=" font-extrabold text-3xl text-green-500">
+          <span className=" font-extrabold lg:text-3xl text-xl text-green-500">
             Spice_Up
           </span>
         </div>
