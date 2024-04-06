@@ -24,7 +24,7 @@ function HeroHome() {
             recipe and start your amazing <br /> journey healthy food with us.
           </p>
           <div>
-            <button className=" bg-orange-400 py-2 px-8 rounded-[10px] font-semibold">
+            <button className=" bg-orange-400 py-2 px-8 rounded-[0px] font-semibold">
               Contact Us
             </button>
           </div>
