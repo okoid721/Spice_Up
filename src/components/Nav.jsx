@@ -68,25 +68,25 @@ const Nav = () => {
               animate={{ x: 0 }}
               transition={{ duration: 1 }}
             >
-              <Link to="/breakfast">
+              <Link to="/home/breakfast">
                 <h1 className="hover:underline focus:underline flex lg:flex-col items-center flex-row">
                   <MdFreeBreakfast size={30} />
                   Breakfast
                 </h1>
               </Link>
-              <Link to="/lunch">
+              <Link to="/home/lunch">
                 <h1 className="hover:underline focus:underline flex lg:flex-col items-center flex-row">
                   <MdLunchDining size={30} />
                   Lunch
                 </h1>
               </Link>
-              <Link to="/dinner">
+              <Link to="/home/dinner">
                 <h1 className="hover:underline focus:underline flex lg:flex-col items-center flex-row">
                   <MdDinnerDining size={30} />
                   Dinner
                 </h1>
               </Link>
-              <Link to="/smallchop">
+              <Link to="/home/smallchop">
                 <h1 className="hover:underline focus:underline flex lg:flex-col items-center flex-row">
                   <GiRoastChicken size={30} />
                   SmallChop
