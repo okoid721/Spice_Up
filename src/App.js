@@ -1,7 +1,7 @@
 import './App.css';
 import Nav from './components/Nav';
 import Home from './pages/Home';
-import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Auth from './pages/Auth';
 import Hero from './components/Hero';
 

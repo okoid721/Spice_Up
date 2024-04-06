@@ -22,7 +22,7 @@ const Login = () => {
     try {
       const url = 'https://recipe-bakend.onrender.com/api/auth/login';
       const { data: res } = await axios.post(url, data);
-      navigate('/', { replace: true, state: { from: location } });
+      navigate('/home', { replace: true, state: { from: location } });
       console.log('Successfully signed up!', res);
       toast.success('Welcome to Spice up');
     } catch (err) {

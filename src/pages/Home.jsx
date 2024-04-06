@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div className=" ">
       <Routes>
-        <Route path="/breakfast" element={<Breakfast />} />
+        <Route path="/" element={<Breakfast />} />
         <Route path="/lunch" element={<Lunch />} />
         <Route path="/dinner" element={<Dinner />} />
         <Route path="/dinner" element={<Dinner />} />

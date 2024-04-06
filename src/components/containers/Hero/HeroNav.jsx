@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 function HeroNav() {
   return (
     <div className="w-screen">
@@ -9,9 +10,11 @@ function HeroNav() {
           </span>
         </div>
         <div>
-          <button className=" py-2 px-8 shadow-lg bg-green-400 text-[20px] rounded-md font-bold ">
-            Login
-          </button>
+          <Link to="/auth/login">
+            <button className=" py-2 px-8 shadow-lg bg-green-400 text-[20px] rounded-md font-bold ">
+              Login
+            </button>
+          </Link>
         </div>
       </div>
     </div>
