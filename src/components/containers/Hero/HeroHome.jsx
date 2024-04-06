@@ -15,7 +15,7 @@ function HeroHome() {
             duration: 1,
           }}
         >
-          <h1 className=" text-7xl leading-[5 rem] font-semibold">
+          <h1 className=" text-7xl leading-[5rem] font-semibold">
             Get the food <br /> recipe more <br /> easier
           </h1>
           <p className=" text-[20px] fonr-semibold ">
@@ -24,7 +24,7 @@ function HeroHome() {
             recipe and start your amazing <br /> journey healthy food with us.
           </p>
           <div>
-            <button className=" bg-orange-400 py-2 px-8 rounded-[0px] font-semibold">
+            <button className=" bg-orange-400 py-2 px-8 rounded-[10px] font-semibold">
               Contact Us
             </button>
           </div>
