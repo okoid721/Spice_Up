@@ -1,4 +1,8 @@
 import React from 'react';
-function AddItem() {}
+function AddItem() {
+    <div>
+        
+    </div>
+}
 
 export default AddItem;
