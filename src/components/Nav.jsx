@@ -12,14 +12,9 @@ import { Link } from 'react-router-dom';
 import Navsmall from './Navsmall';
 
 const Nav = () => {
-  const [open, setOpen] = React.useState(false);
-  const [login, setLogin] = React.useState(false);
   const [isOpen, setIsOpen] = React.useState(false);
+  const [searchResults, setSearchResults] = React.useState([]);
   const menuRef = React.useRef(null);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
 
   const handleOutsideClick = (event) => {
     if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -33,6 +28,7 @@ const Nav = () => {
       document.removeEventListener('mousedown', handleOutsideClick);
     };
   }, []);
+
   return (
     <div>
       <div className=" hidden lg:block">
@@ -61,7 +57,7 @@ const Nav = () => {
             </div>
           </div>
           <div className=" lg:flex flex-row hidden mt-4 items-center justify-around w-full ">
-            <Link to="/home">
+            <Link to="/home/breakfast">
               <h1 className="hover:underline focus:underline flex lg:flex-col items-center flex-row">
                 <MdFreeBreakfast size={30} />
                 Breakfast

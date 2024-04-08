@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 function HeroHome() {
   return (
     <div className="w-full  ">
-      <div className=" flex lg:flex-row flex-col mt-[20px] justify-between w-full  items-center lg:px-32 px-8">
+      <div className=" flex lg:flex-row flex-col mt-[20px] justify-between w-full  items-center  px-8">
         <motion.div
           className=" flex flex-col gap-8 text-start"
           initial={{ x: -100, opacity: 0 }}
