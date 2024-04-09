@@ -31,7 +31,7 @@ function BreakfastMap() {
   };
 
   return (
-    <div className="w-full h-screen grid lg:grid-cols-3 grid-cols-1 gap-16 mb-8 mt-8">
+    <div className="w-full h-screen grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-16 mb-8 mt-8">
       {breakfast.map((data, i) => (
         <div
           key={i}
@@ -54,7 +54,7 @@ function BreakfastMap() {
       {selectedItem && (
         <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center">
           <div className=" px-8">
-            <div className="bg-white p-8 rounded-lg lg:w-[700px] md:w-[500px] w-[350px] h-[350px] md:h-[400px]  lg:h-[600px] overflow-auto flex flex-col items-center gap-5">
+            <div className="bg-white p-8 rounded-lg lg:w-[700px]  md:w-[600px] w-[350px] h-[350px] md:h-[500px]  lg:h-[600px] overflow-auto flex flex-col items-center gap-5">
               <div className=" flex flex-col items-center gap-10">
                 <h2 className="font-bold text-2xl underline">
                   {selectedItem.name}
