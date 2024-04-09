@@ -29,11 +29,6 @@ const Nav = () => {
     };
   }, []);
 
-  const openInNewTab = (url) => {
-    const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
-    if (newWindow) newWindow.opener = null;
-  };
-
   return (
     <div>
       <div className=" hidden lg:block">
@@ -86,16 +81,16 @@ const Nav = () => {
                 SmallChop
               </h1>
             </Link>
-            <Link
-              to="#"
-              onClick={() => openInNewTab('https://admin-recipe.vercel.app/')}
+            <a
+              href="https://admin-recipe.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
             >
               <h1 className="hover:underline focus:underline flex lg:flex-col items-center flex-row">
                 <IoIosAdd size={30} />
                 Add Your MEAL
               </h1>
-            </Link>
-
+            </a>
             <Link to="/auth/login">
               <button className="lg:text-2xl lg:hidden  font-bold hover:underline flex lg:flex-col flex-row items-center text-[20px] ">
                 <IoPerson />

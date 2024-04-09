@@ -6,6 +6,7 @@ import AddItem from '../components/popular/AddItem';
 import SmallChop from '../components/popular/SmallChop';
 import { Routes, Route } from 'react-router-dom';
 import AllItems from '../components/popular/AllItems';
+
 const Home = () => {
   return (
     <div className=" ">
@@ -16,7 +17,6 @@ const Home = () => {
         <Route path="/dinner" element={<Dinner />} />
         <Route path="/dinner" element={<Dinner />} />s
         <Route path="/smallchop" element={<SmallChop />} />
-        <Route path="/additems" element={<AddItem />} />
       </Routes>
     </div>
   );

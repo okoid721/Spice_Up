@@ -7,17 +7,15 @@ function SmallchopHead() {
     getBreakfast();
   }, []);
   const getBreakfast = async () => {
-    const check = localStorage.getItem('small');
-    if (check) {
-      setBreakfast(JSON.parse(check));
-    } else {
-      const api = await fetch(
+    try {
+      const response = await fetch(
         `https://recipe-bakend.onrender.com/api/food/get-smallchop`
       );
-      const data = await api.json();
-      localStorage.setItem('small', JSON.stringify(data));
+      const data = await response.json();
+      console.log('Data from API:', data);
       setBreakfast(data);
-      console.log(data);
+    } catch (error) {
+      console.error('Error fetching data:', error);
     }
   };
   return (

@@ -4,20 +4,18 @@ import TruncateText from '../../TruncateText';
 function LunchMap() {
   const [breakfast, setBreakfast] = React.useState([]);
   React.useEffect(() => {
-    getBreakfast();
+    getLaunch();
   }, []);
-  const getBreakfast = async () => {
-    const check = localStorage.getItem('lunch');
-    if (check) {
-      setBreakfast(JSON.parse(check));
-    } else {
-      const api = await fetch(
+  const getLaunch = async () => {
+    try {
+      const response = await fetch(
         `https://recipe-bakend.onrender.com/api/food/get-launch`
       );
-      const data = await api.json();
-      localStorage.setItem('lunch', JSON.stringify(data));
+      const data = await response.json();
+      console.log('Data from API:', data);
       setBreakfast(data);
-      console.log(data);
+    } catch (error) {
+      console.error('Error fetching data:', error);
     }
   };
   return (
