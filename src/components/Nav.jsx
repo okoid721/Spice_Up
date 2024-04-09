@@ -8,23 +8,6 @@ import { IoIosAdd } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 
 const Nav = () => {
-  const [isOpen, setIsOpen] = React.useState(false);
-  const [searchResults, setSearchResults] = React.useState([]);
-  const menuRef = React.useRef(null);
-
-  const handleOutsideClick = (event) => {
-    if (menuRef.current && !menuRef.current.contains(event.target)) {
-      setIsOpen(false);
-    }
-  };
-
-  React.useEffect(() => {
-    document.addEventListener('mousedown', handleOutsideClick);
-    return () => {
-      document.removeEventListener('mousedown', handleOutsideClick);
-    };
-  }, []);
-
   return (
     <div>
       <div className=" hidden lg:block">
