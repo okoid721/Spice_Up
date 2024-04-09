@@ -14,21 +14,19 @@ const Nav = () => {
         <div className=" w-full bg-[aliceblue]  shadow-xl py-6 sticky top-0 z-10 lg:px-6 px-2 ">
           <div className="flex flex-row items-center justify-between">
             <Link to="/home">
-              <h1 className="font-extrabold hidden lg:flex text-3xl ">
-                SPICE_☝🏿
-              </h1>
+              <h1 className="font-extrabold  flex text-3xl ">SPICE_☝🏿</h1>
             </Link>
 
             <div className="">
               <Link to="/auth/login">
-                <button className="lg:text-2xl hidden font-bold hover:underline lg:flex flex-col lg:flex-row items-center py-2 px-6">
+                <button className="text-2xl  font-bold hover:underline flex lg:flex-row items-center py-2 px-6">
                   <IoPerson />
                   Logout
                 </button>
               </Link>
             </div>
           </div>
-          <div className=" lg:flex flex-row hidden mt-4 items-center justify-around w-full ">
+          <div className=" flex flex-row  mt-4 items-center justify-around w-full ">
             <Link to="/home/breakfast">
               <h1 className="hover:underline focus:underline flex lg:flex-col items-center flex-row">
                 <MdFreeBreakfast size={30} />
