@@ -2,10 +2,11 @@ import React from 'react';
 import Breakfast from '../components/popular/Breakfast';
 import Dinner from '../components/popular/Dinner';
 import Lunch from '../components/popular/Lunch';
-import AddItem from '../components/popular/AddItem';
+
 import SmallChop from '../components/popular/SmallChop';
 import { Routes, Route } from 'react-router-dom';
 import AllItems from '../components/popular/AllItems';
+import Recipe from '../components/Recipe';
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
         <Route path="/dinner" element={<Dinner />} />
         <Route path="/dinner" element={<Dinner />} />s
         <Route path="/smallchop" element={<SmallChop />} />
+        <Route path="/recipe/:id" element={<Recipe />} />
       </Routes>
     </div>
   );

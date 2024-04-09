@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import TruncateText from '../TruncateText';
+import { Link } from 'react-router-dom';
 const AllItems = () => {
   const [foodData, setFoodData] = useState({
     breakfasts: [],
@@ -43,19 +44,24 @@ const AllItems = () => {
                     key={item._id}
                     className=" w-[300px]  h-[500px] shadow-lg flex flex-col bg-[#f5f5f5] rounded-[10px] items-center flex-wrap cursor-pointer "
                   >
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      className="card rounded-t-[10px]"
-                    />
-                    <div className="flex flex-col items-center ">
-                      <h2 className=" font-extrabold text-2xl mt-5 mb-5 hover:underline">
-                        {item.name}
-                      </h2>
-                      <p className=" px-4 font-semibold hover:underline">
-                        <TruncateText text={item.description} maxLength={100} />
-                      </p>
-                    </div>
+                    <Link to={'/home/recipe/' + item.id}>
+                      <img
+                        src={item.image}
+                        alt={item.name}
+                        className="card rounded-t-[10px]"
+                      />
+                      <div className="flex flex-col items-center ">
+                        <h2 className=" font-extrabold text-2xl mt-5 mb-5 hover:underline">
+                          {item.name}
+                        </h2>
+                        <p className=" px-4 font-semibold hover:underline">
+                          <TruncateText
+                            text={item.description}
+                            maxLength={100}
+                          />
+                        </p>
+                      </div>
+                    </Link>
                   </div>
                 ))}
               </div>
