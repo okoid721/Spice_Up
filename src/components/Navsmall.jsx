@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { FaSearch } from 'react-icons/fa';
+import React from 'react';
 import { IoPerson } from 'react-icons/io5';
 import { FaBarsStaggered } from 'react-icons/fa6';
 import { motion } from 'framer-motion';
@@ -10,22 +9,14 @@ import { GiRoastChicken } from 'react-icons/gi';
 import { IoIosAdd } from 'react-icons/io';
 
 import { IoMdArrowRoundBack } from 'react-icons/io';
-import { Link, useSearchParams, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Navsmall = () => {
   const [open, setOpen] = React.useState(false);
   const [isOpen, setIsOpen] = React.useState(false);
-  const [search, setSearch] = useState('');
-  const menuRef = React.useRef(null);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-  };
-  const navigate = useNavigate();
-
-  const submitHandler = (e) => {
-    e.preventDefault();
-    navigate(`/search/` + search);
   };
 
   return (
@@ -46,20 +37,6 @@ const Navsmall = () => {
             </button>
           </div>
         </div>
-        <form action="submit" onSubmit={submitHandler}>
-          <div className=" items-center  flex lg:hidden bg-white w-fit lg:px-7 px-2 py-2 lg:font-extrabold rounded-lg shadow-xl">
-            <input
-              type="search"
-              placeholder="Search...."
-              className="bg-transparent outline-none rounded-none"
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-            />
-            <Link to={`/search/${search}`}>
-              <FaSearch size={30} className="" />
-            </Link>
-          </div>
-        </form>
       </div>
       <div className="  ">
         {open && (
