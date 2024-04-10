@@ -11,7 +11,7 @@ import Navsmall from './Navsmall';
 const Nav = () => {
   return (
     <div>
-      <div className=" ">
+      <div className=" lg:block hidden">
         <div className=" w-full bg-[aliceblue]  shadow-xl py-6 sticky top-0 z-10 lg:px-6 px-2 ">
           <div className="flex flex-row items-center justify-between">
             <Link to="/home">
