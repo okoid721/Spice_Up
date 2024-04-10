@@ -6,6 +6,7 @@ import { MdDinnerDining } from 'react-icons/md';
 import { GiRoastChicken } from 'react-icons/gi';
 import { IoIosAdd } from 'react-icons/io';
 import { Link } from 'react-router-dom';
+import Navsmall from './Navsmall';
 
 const Nav = () => {
   return (
@@ -70,6 +71,7 @@ const Nav = () => {
           </div>
         </div>
       </div>
+      <Navsmall />
     </div>
   );
 };
